@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ofdft-opt"
+version = "0.1.0"
+description = "Orbital-free DFT (DFTpy) structure relaxation and stress-strain curves, with Slurm job scripts"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "ye-min-thant" }]
+keywords = ["dftpy", "orbital-free-dft", "ofdft", "structure-optimization", "stress-strain", "slurm", "mpi"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Scientific/Engineering :: Chemistry",
+]
+dependencies = [
+    "numpy",
+    "scipy",
+    "ase>=3.23",
+    "dftpy>=2.1.2,<2.3",
+]
+
+[project.optional-dependencies]
+mpi = ["mpi4py", "mpi4py-fft"]
+plot = ["matplotlib"]
+
+[project.scripts]
+ofdft = "ofdft_opt.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/ye-min-thant/hpc-skills"
+Repository = "https://github.com/ye-min-thant/hpc-skills"
+
+# src layout; ofdft_opt._vendor and ofdft_opt.data have no __init__.py, so namespace discovery
+# (the pyproject default) is what picks them up. Tests live outside src and are not packaged.
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["ofdft_opt*"]
+exclude = ["*.__pycache__", "*.tests"]
+namespaces = true
+
+[tool.setuptools.package-data]
+"ofdft_opt.data" = ["*.vasp"]

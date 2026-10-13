@@ -1,0 +1,17 @@
+{
+  "name": "hpc-skills",
+  "owner": {
+    "name": "ye-min-thant",
+    "url": "https://github.com/ye-min-thant"
+  },
+  "metadata": {
+    "description": "Claude Code plugins for running materials-science simulations on Slurm HPC clusters"
+  },
+  "plugins": [
+    {
+      "name": "ofdft",
+      "source": "./plugins/ofdft",
+      "description": "Orbital-free DFT (DFTpy) structure relaxation and stress-strain curves on a Slurm cluster"
+    }
+  ]
+}

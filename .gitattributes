@@ -1,0 +1,4 @@
+# Keep every text file LF on all platforms (job scripts and pseudopotential checksums depend on it).
+* text=auto eol=lf
+*.png binary
+*.recpot text eol=lf

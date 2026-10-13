@@ -1,0 +1,24 @@
+# Conda environment for ofdft-opt: the combination tested on the cluster (13,140-atom runs, 64 MPI ranks).
+# Miniforge (conda-forge) is required; never use the Anaconda 'defaults' channel.
+# Create it on the login node (takes several minutes):
+#   conda env create -n ofdft -f environment.yml
+# DFTpy comes from PyPI (the 2.2.0 release); never install the DFTpy GitHub development branch
+# (it computes a wrong XC stress under MPI). MPI runs use this env's own mpirun (Open MPI 5).
+name: ofdft
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.10
+  - numpy=2.2.6
+  - scipy=1.15.3
+  - ase=3.29.0
+  - mpi4py=4.1.2
+  - mpi4py-fft=2.0.6
+  - openmpi=5.0
+  - fftw
+  - matplotlib
+  - pip
+  - setuptools
+  - pip:
+      - dftpy==2.2.0

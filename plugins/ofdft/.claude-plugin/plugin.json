@@ -1,0 +1,22 @@
+{
+  "name": "ofdft",
+  "version": "0.1.0",
+  "description": "Orbital-free DFT (DFTpy) structure relaxation and stress-strain curves on a Slurm cluster: one-time cluster setup, job scripts, submission over SSH, monitoring, restart and plots.",
+  "author": {
+    "name": "ye-min-thant",
+    "url": "https://github.com/ye-min-thant"
+  },
+  "homepage": "https://github.com/ye-min-thant/hpc-skills",
+  "repository": "https://github.com/ye-min-thant/hpc-skills",
+  "license": "MIT",
+  "keywords": [
+    "dftpy",
+    "orbital-free-dft",
+    "ofdft",
+    "slurm",
+    "hpc",
+    "structure-optimization",
+    "stress-strain",
+    "materials-science"
+  ]
+}

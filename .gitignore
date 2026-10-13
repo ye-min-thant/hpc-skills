@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+dist/
+build/
+*.egg-info/
+.venv/
+
+# Run outputs (never commit results or job logs)
+*.out
+*_scf.log
+*.xyz
+*CONTCAR*
+*.STOP
+STOP
